@@ -20,7 +20,6 @@ This is an independent student project. It is not an official course tool and do
 - Draws an optional Five-Factor radar chart from user-entered NEO scores.
 - Lets the user hide all NEO interpretation while still showing the chart.
 - Downloads the card as a high-resolution PNG for sharing.
-- Exports and imports a JSON profile for easier reuse.
 - Stores form data locally in the browser; it has no backend.
 
 ## Quick start
@@ -58,9 +57,9 @@ The page loads the `html2canvas` library from cdnjs to create the PNG. That requ
 
 ## Ali Zahrawi starter profile
 
-The file [`examples/ali-zahrawi-profile.json`](examples/ali-zahrawi-profile.json) is intentionally conservative: it contains Ali's name and public GitHub profile only. Employer, role, contact details, industry history, business challenges, and NEO scores are blank because they were not verified.
+The file [`examples/ali-zahrawi-profile.json`](examples/ali-zahrawi-profile.json) is an editable reference template. It is intentionally conservative: it contains Ali's name and public GitHub profile only. Employer, role, contact details, industry history, business challenges, and NEO scores are blank because they were not verified.
 
-Use **Import JSON** to load it, then replace the blanks with accurate information you are comfortable sharing. The helper text in the form suggests a professional structure without inventing facts.
+Use it as a checklist while completing the web form, and replace the blanks only with accurate information you are comfortable sharing.
 
 ## Customization
 
