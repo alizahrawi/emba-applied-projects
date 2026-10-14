@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Beyond the Title — Professional Connection Cards</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eceae6;--panel:#fff;--ink:#1b2033;--mut:#6b7080;--line:#d9d6cf;--acc:#2b3a8c;--gold:#a8844f;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#13151b;--panel:#1b1e27;--ink:#ecebe6;--mut:#9a9eac;--line:#2d3140;--acc:#6f86ff}}
+:root[data-theme="dark"]{--bg:#13151b;--panel:#1b1e27;--ink:#ecebe6;--mut:#9a9eac;--line:#2d3140;--acc:#6f86ff}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Vazirmatn",Tahoma,sans-serif;line-height:1.8}
+.wrap{max-width:1020px;margin:0 auto;padding:20px 14px 40px;display:grid;gap:22px}
+@media(min-width:900px){.wrap{grid-template-columns:1fr 440px;align-items:start}.preview{position:sticky;top:20px}}
+h1{font-size:1.3rem;margin:0 0 4px;font-weight:700}
+.sub{color:var(--mut);font-size:.88rem;margin:0 0 18px}
+form{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px}
+fieldset{border:0;padding:0;margin:0 0 20px}
+legend{font-weight:700;font-size:.95rem;padding:0 0 8px;color:var(--acc);width:100%;border-bottom:1px solid var(--line);margin-bottom:12px}
+label{display:block;font-size:.84rem;color:var(--mut);margin:10px 0 3px}
+label.ck{display:flex;gap:8px;align-items:center;color:var(--ink);font-size:.9rem;margin-top:14px}
+input,textarea,select{width:100%;font:inherit;font-size:16px;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:6px;padding:8px 10px}
+select option{color:#111}
+label.ck input{width:18px;height:18px;padding:0;accent-color:#2b3a8c}
+input:focus,textarea:focus,select:focus,button:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
+.row{display:grid;gap:10px;grid-template-columns:1fr}
+@media(min-width:520px){.row.two{grid-template-columns:1fr 1fr}}
+.neo{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.neo label{margin:0 0 3px;font-size:.74rem;text-align:center;white-space:nowrap}
+.neo input{text-align:center;padding:8px 2px}
+.hint{font-size:.78rem;color:var(--mut);margin:6px 0 0}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+button{font:inherit;cursor:pointer;border-radius:6px;padding:9px 16px;border:1px solid #2b3a8c;background:linear-gradient(135deg,#2b3a8c,#1a9aa0);color:#fff}
+button.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+button:disabled{opacity:.6;cursor:wait}
+/* card: always light so screenshots look the same */
+.card{background:#fbfaf7;color:#1b2033;border-radius:6px;overflow:hidden;box-shadow:0 14px 34px rgba(27,37,89,.2);position:relative}
+.card::after{content:"";position:absolute;inset:8px;border:1px solid rgba(255,255,255,.0);outline:1px solid rgba(168,132,79,.5);outline-offset:-1px;pointer-events:none;border-radius:3px}
+.ch{padding:30px 26px 22px;text-align:center;color:#fff;background:linear-gradient(135deg,#1b2559 0%,#33479f 55%,#1a9aa0 100%)}
+.nm{font-size:1.7rem;font-weight:700;line-height:1.35;margin:0;overflow-wrap:anywhere}
+.pos{margin:6px 0 0;font-weight:500;overflow-wrap:anywhere;color:#e8ecff}
+.co{color:#c9d3ff;font-size:.92rem;overflow-wrap:anywhere}
+.rule{width:56px;height:3px;border-radius:2px;background:linear-gradient(90deg,#e8c36a,#f2a65a);margin:14px auto 0}
+.ct{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:14px}
+.ct a{color:#fff;text-decoration:none;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);border-radius:20px;padding:1px 14px;direction:ltr;unicode-bidi:embed;font-size:.86rem;overflow-wrap:anywhere}
+.ct a:hover{background:rgba(255,255,255,.3)}
+.cs{padding:6px 26px 18px}
+.cs h3{font-size:.95rem;margin:18px 0 8px;color:#2b3a8c;font-weight:700}
+.cs h3::before{content:"";display:inline-block;width:4px;height:15px;border-radius:2px;background:linear-gradient(#e8a23a,#e0644f);margin-inline-end:8px;vertical-align:-2px}
+.cs p,.cs li{margin:0;font-size:.92rem;overflow-wrap:anywhere}
+.tl{list-style:none;margin:0;padding:0;padding-inline-start:18px;border-inline-start:2px solid #cfd6f5}
+.tl li{position:relative;padding:2px 0 8px}
+.tl li::before{content:"";position:absolute;inset-inline-start:-24px;top:11px;width:10px;height:10px;border-radius:50%;background:#fff;border:2px solid #e8a23a}
+.tl li:last-child::before{background:linear-gradient(135deg,#33479f,#1a9aa0);border-color:#33479f}
+.ch-list{margin:0;padding:0;padding-inline-start:20px}
+.ch-list li{padding:2px 0}.ch-list li::marker{color:#e0644f;font-weight:700}
+.focus{border-inline-start:3px solid #1a9aa0;padding:4px 12px;background:#e9f6f6;border-radius:0 4px 4px 0}
+.neo-box{background:#fff;border:1px solid #dfe3f4;border-radius:8px;padding:8px 8px 12px}
+.neo-box svg{width:100%;height:auto;display:block;max-width:380px;margin:0 auto}
+.chips{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:6px}
+.chip{font-size:.76rem;padding:1px 10px;border:1px solid;border-radius:20px}
+.chip b{color:#1b2559}
+.top{text-align:center;font-size:.86rem;margin-top:8px}
+.tr{display:grid;grid-template-columns:1fr;gap:10px;margin-top:14px}
+.tc{border:1px solid;border-radius:8px;padding:8px 12px}
+.tc.pos{background:#eef8f2;border-color:#bfe3cf}.tc.neg{background:#fdf0ed;border-color:#f1c4bb}
+.tc h4{margin:0 0 4px;font-size:.84rem;font-weight:700}
+.tc.pos h4{color:#1f7a50}.tc.neg h4{color:#b4452f}
+.tc ul{list-style:none;margin:0;padding:0}
+.tc li{padding:6px 0}
+.tc li b{display:block;color:#1b2559;font-size:.86rem}
+.tc li span{display:block;color:#454a5c;font-size:.8rem;line-height:1.75;text-align:start}
+.ft{text-align:center;direction:ltr;font-size:.78rem;color:#6b7080;padding:6px 0 18px;position:relative;z-index:1}
+.hide{display:none!important}
+/* landscape layout (screenshot mode + downloaded image) */
+.card.land{width:1100px;max-width:none}
+.land .ch{display:flex;justify-content:space-between;align-items:center;text-align:start;gap:24px;padding:36px 46px}
+.land .nm{font-size:2.4rem}.land .pos{font-size:1.15rem}.land .co{font-size:1rem}
+.land .rule{margin:14px 0 0}
+.land .ct{flex-direction:column;align-items:flex-end;margin:0;gap:8px}
+.land .ct a{font-size:1rem;padding:3px 18px}
+.land .cs{display:grid;grid-template-columns:1.1fr 1fr;column-gap:46px;grid-template-areas:"a b" "c b" "d b" "e e";align-content:start;padding:10px 46px 24px}
+.land .cs p,.land .cs li{font-size:1rem}
+.land .tr{grid-template-columns:1fr 1fr;gap:16px}
+.land .tc li span{font-size:.88rem}
+#s-ind{grid-area:a}#s-focus{grid-area:c}#s-ch{grid-area:d}#s-neo{grid-area:b}#tr{grid-area:e}
+/* screenshot mode */
+body.shot form,body.shot .head{display:none}
+body.shot .wrap{grid-template-columns:1fr;max-width:none;padding:12px}
+body.shot .preview{display:flex;justify-content:center;position:static}
+.back{display:none;position:fixed;bottom:calc(14px + env(safe-area-inset-bottom,0px));left:14px;z-index:5}
+body.shot .back{display:block}
+.back.dlb{left:auto;right:14px}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+<div class="editor">
+<div class="head"><h1>Beyond the Title — Professional Connection Cards</h1><p class="sub">اطلاعات را وارد کنید؛ کارت همان لحظه ساخته می‌شود. اطلاعات روی همین دستگاه ذخیره می‌ماند.</p></div>
+<form id="f" autocomplete="off" onsubmit="return false">
+<fieldset><legend>اطلاعات تماس</legend>
+<label for="name">نام و نام خانوادگی</label><input id="name">
+<div class="row two"><div><label for="phone">شماره تماس</label><input id="phone" inputmode="tel" dir="ltr"></div>
+<div><label for="li">آدرس لینکدین</label><input id="li" dir="ltr" placeholder="linkedin.com/in/..."></div></div>
+</fieldset>
+<fieldset><legend>جایگاه حرفه‌ای</legend>
+<label for="pos">پوزیشن شغلی فعلی</label><input id="pos">
+<div class="row two"><div><label for="co">شرکت</label><input id="co"></div><div><label for="ind">صنعت</label><input id="ind"></div></div>
+<label>سه صنعتی که در آن فعالیت داشته‌اید (از قدیم به جدید)</label>
+<div class="row"><input id="i1" placeholder="قدیمی‌ترین"><input id="i2" placeholder="میانی"><input id="i3" placeholder="جدیدترین"></div>
+<label for="focus">تمرکز فعلی من در کدام بخش صنعت است؟</label><textarea id="focus" rows="2"></textarea>
+<label>سه چالش فعلی من در کسب‌وکار</label>
+<div class="row"><input id="c1"><input id="c2"><input id="c3"></div>
+</fieldset>
+<fieldset><legend>نتیجه آزمون NEO</legend>
+<div class="neo">
+<div><label for="n">روان‌رنجوری</label><input id="n" type="number" min="0" max="100" inputmode="numeric"></div>
+<div><label for="e">برون‌گرایی</label><input id="e" type="number" min="0" max="100" inputmode="numeric"></div>
+<div><label for="o">گشودگی</label><input id="o" type="number" min="0" max="100" inputmode="numeric"></div>
+<div><label for="a">توافق‌پذیری</label><input id="a" type="number" min="0" max="100" inputmode="numeric"></div>
+<div><label for="c">وظیفه‌شناسی</label><input id="c" type="number" min="0" max="100" inputmode="numeric"></div>
+</div>
+<p class="hint">هر نمره را بین ۰ تا ۱۰۰ وارد کنید.</p>
+<label class="ck"><input type="checkbox" id="showtr" checked>نمایش دو ویژگی مثبت و دو ویژگی منفی در خروجی NEO</label>
+</fieldset>
+<fieldset><legend>تنظیمات خروجی</legend>
+<label for="lang">زبان کارت</label>
+<select id="lang"><option value="fa">فارسی</option><option value="en">English</option></select>
+<p class="hint">تصویر دانلودی و حالت اسکرین‌شات همیشه افقی (Landscape) است.</p>
+</fieldset>
+<div class="btns"><button type="button" id="shot">نمایش برای اسکرین‌شات</button><button type="button" id="dl">دانلود تصویر کارت</button><button type="button" class="ghost" id="reset">پاک کردن همه</button></div>
+</form>
+</div>
+<div class="preview"><div class="card" id="card">
+<div class="ch"><div class="hd"><h2 class="nm" id="o-name"></h2><p class="pos" id="o-pos"></p><div class="co" id="o-co"></div><div class="rule"></div></div>
+<div class="ct"><a id="o-phone"></a><a id="o-li" target="_blank" rel="noopener noreferrer"></a></div></div>
+<div class="cs">
+<div id="s-ind"><h3 id="h-ind"></h3><ul class="tl" id="o-ind"></ul></div>
+<div id="s-focus"><h3 id="h-fc"></h3><p class="focus" id="o-focus"></p></div>
+<div id="s-ch"><h3 id="h-ch"></h3><ol class="ch-list" id="o-ch"></ol></div>
+<div id="s-neo"><h3 id="h-neo"></h3><div class="neo-box"><svg id="radar" viewBox="0 0 360 280" role="img" aria-label="NEO"></svg><div class="chips" id="chips"></div><div class="top" id="top"></div></div></div>
+<div class="tr hide" id="tr"><div class="tc pos"><h4 id="h-pos"></h4><ul id="tp"></ul></div><div class="tc neg"><h4 id="h-neg"></h4><ul id="tn"></ul></div></div>
+</div>
+<div class="ft">Created by bizeyz 💙 Ali Zahrawi</div>
+</div></div>
+</div>
+<button class="back dlb" id="dl2" type="button">دانلود تصویر</button><button class="back" id="back" type="button">بازگشت به ویرایش</button>
+<script>
+var NC=["#e0644f","#e8a23a","#7b5cd6","#2fa36b","#2f7fd3"],KEYS=["n","e","o","a","c"];
+var I={
+fa:{nm:"نام و نام خانوادگی",ind:"مسیر صنعتی",fc:"تمرکز فعلی",ch:"چالش‌های امروز",neo:"پروفایل شخصیتی NEO",top:"ویژگی برجسته: ",pos:"دو ویژگی مثبت",neg:"دو ویژگی منفی",mild:"گرایش ملایم",n:["روان‌رنجوری","برون‌گرایی","گشودگی","توافق‌پذیری","وظیفه‌شناسی"]},
+en:{nm:"Full name",ind:"Industry journey",fc:"Current focus",ch:"Challenges right now",neo:"NEO personality profile",top:"Standout trait: ",pos:"Two positive traits",neg:"Two negative traits",mild:"mild tendency",n:["Neuroticism","Extraversion","Openness","Agreeableness","Conscientiousness"]}};
+var PRO={fa:[
+[["روان‌رنجوری پایین: ثبات هیجانی","تنظیم هیجان کارآمد و تاب‌آوری بالا در برابر فشار و ابهام. کیفیت قضاوت در شرایط بحرانی حفظ می‌شود و این ویژگی برای نقش‌های مذاکره‌محور و تصمیم‌گیری در محیط‌های پرنوسان مزیت محسوب می‌شود."],["روان‌رنجوری بالا: واکنش‌پذیری هیجانی","آستانه تحریک‌پذیری پایین‌تر در برابر استرس و عدم قطعیت. در محیط‌های پرنوسان ممکن است نشخوار فکری و بار شناختی سرعت تصمیم‌گیری را کاهش دهد؛ ساختار تصمیم‌گیری مشخص و شبکه حمایتی این اثر را تعدیل می‌کند."]],
+[["برون‌گرایی پایین: تعامل عمیق و گزینشی","ترجیح روابط کم‌تعداد و عمیق به شبکه گسترده. برای تحلیل و کار متمرکز مزیت است، اما بدون برنامه‌ریزی آگاهانه، دیده‌شدن و رشد سرمایه اجتماعی کندتر خواهد بود."],["برون‌گرایی بالا: جهت‌گیری اجتماعی","تمایل قوی به تعامل، جلب منابع و ایجاد شبکه؛ در فروش، توسعه کسب‌وکار و شبکه‌سازی مزیت رقابتی ایجاد می‌کند. ریسک اصلی، غلبه گفت‌وگو بر گوش‌دادن و کم‌توجهی به کار عمیق و انفرادی است."]],
+[["گشودگی پایین: واقع‌گرایی عملی","گرایش به روش‌های اثبات‌شده و اجرای قابل‌اتکا. در مقابل، در پروژه‌های تحول و نوآوری ممکن است نسبت به رویکردهای نامتعارف مقاومت نشان دهد."],["گشودگی بالا: تفکر واگرا","کنجکاوی فکری، پذیرش مدل‌های ذهنی تازه و تمایل به نوآوری؛ برای استراتژی، محصول و ورود به حوزه‌های جدید مناسب است. ریسک آن پراکندگی تمرکز و رها کردن ایده‌ها پیش از مرحله اجرا است."]],
+[["توافق‌پذیری پایین: رویکرد تحلیلی-رقابتی","تعامل مبتنی بر منطق و منافع، همراه با نقد دقیق و مذاکره قاطع. برای حفظ اعتماد و انسجام تیم باید این سبک آگاهانه تعدیل شود."],["توافق‌پذیری بالا: همدلی و اعتمادسازی","تسهیل همکاری میان‌تیمی و روابط بلندمدت. ریسک اصلی، اجتناب از تعارض سازنده و دشواری در مذاکرات سخت یا تعیین مرزهای حرفه‌ای است."]],
+[["وظیفه‌شناسی پایین: انعطاف و واکنش سریع","چابکی بالا در تغییر مسیر، اما ساختار و پیگیری سیستماتیک ضعیف‌تر. برای اجرای پایدار، ابزارهای بیرونی مانند OKR و مرور دوره‌ای پیشرفت توصیه می‌شود."],["وظیفه‌شناسی بالا: خودتنظیمی و نتیجه‌محوری","نظم، برنامه‌ریزی و تعهد به خروجی؛ در پژوهش‌ها از پایدارترین پیش‌بینی‌کننده‌های عملکرد شغلی است. ریسک آن کمال‌گرایی و کندی در شرایطی است که چابکی لازم دارد."]]
+],en:[
+[["Low Neuroticism: emotional stability","Effective emotion regulation and resilience under pressure and ambiguity. Judgment quality holds in crises, an advantage in negotiation-heavy roles and volatile environments."],["High Neuroticism: emotional reactivity","Lower threshold for stress and uncertainty. In volatile settings it can add cognitive load and slow decisions; clear decision frameworks and a support network moderate the effect."]],
+[["Low Extraversion: depth-oriented interaction","Prefers a few deep relationships over a wide network. An asset for analysis and focused work, though visibility and social capital grow slowly without deliberate outreach."],["High Extraversion: social orientation","Strong drive for interaction, resource-gathering and network building: a competitive edge in sales, business development and networking. Main risk is talking over listening and neglecting deep solo work."]],
+[["Low Openness: practical realism","Favors proven methods and dependable execution. In transformation or innovation work it may resist unconventional approaches."],["High Openness: divergent thinking","Intellectual curiosity and appetite for new mental models; suited to strategy, product and new-market entry. Risk: scattered focus and dropping ideas before execution."]],
+[["Low Agreeableness: analytical-competitive stance","Interaction grounded in logic and interests, with sharp critique and firm negotiation. The style should be consciously tempered to protect trust and team cohesion."],["High Agreeableness: empathy and trust-building","Eases cross-team collaboration and long-term relationships. Main risk is avoiding constructive conflict and difficulty in hard negotiations or setting professional boundaries."]],
+[["Low Conscientiousness: flexibility and fast response","Agile at changing course, but less structured, systematic follow-through. External systems such as OKRs and periodic progress reviews are recommended for steady execution."],["High Conscientiousness: self-discipline and results focus","Order, planning and commitment to output; among the most stable predictors of job performance in research. Risk: perfectionism and slowness where agility is needed."]]]};
+var IDS=["name","phone","li","pos","co","ind","i1","i2","i3","focus","c1","c2","c3","n","e","o","a","c","lang","showtr"];
+var KEY="introcard.v2",$=function(i){return document.getElementById(i)},DL=null;
+var FA="۰۱۲۳۴۵۶۷۸۹";function fa(x){return String(x).replace(/\d/g,function(d){return FA[d]})}
+function load(){try{var d=JSON.parse(localStorage.getItem(KEY)||"{}");IDS.forEach(function(i){if(d[i]==null)return;var e=$(i);if(e.type==="checkbox")e.checked=!!d[i];else e.value=d[i]})}catch(e){}}
+function save(){try{var d={};IDS.forEach(function(i){var e=$(i);d[i]=e.type==="checkbox"?e.checked:e.value});localStorage.setItem(KEY,JSON.stringify(d))}catch(e){}}
+function v(i){return $(i).value.trim()}
+function show(id,on){$(id).classList.toggle("hide",!on)}
+function list(el,items){el.textContent="";items.forEach(function(t){var li=document.createElement("li");li.textContent=t;el.appendChild(li)})}
+function pt(cx,cy,r,k){var a=-Math.PI/2+k*2*Math.PI/5;return[cx+r*Math.cos(a),cy+r*Math.sin(a)]}
+function link(el,text,href){el.textContent=text;show(el.id,!!text);if(text)el.setAttribute("href",href);else el.removeAttribute("href")}
+function liHref(s){if(/^https?:\/\//i.test(s))return s;if(/[.\/]/.test(s))return"https://"+s.replace(/^\/+/,"");return"https://www.linkedin.com/in/"+s}
+function radar(vals,S){
+ var s=$("radar"),cx=180,cy=145,R=100,h='<defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#33479f" stop-opacity=".4"/><stop offset="1" stop-color="#1a9aa0" stop-opacity=".4"/></linearGradient></defs>';
+ [25,50,75,100].forEach(function(p){h+='<polygon points="'+[0,1,2,3,4].map(function(k){return pt(cx,cy,R*p/100,k).join(",")}).join(" ")+'" fill="none" stroke="#dfe3f4"/>'});
+ for(var k=0;k<5;k++){var e=pt(cx,cy,R,k);h+='<line x1="'+cx+'" y1="'+cy+'" x2="'+e[0]+'" y2="'+e[1]+'" stroke="#dfe3f4"/>'}
+ h+='<polygon points="'+vals.map(function(x,k){return pt(cx,cy,R*x/100,k).join(",")}).join(" ")+'" fill="url(#rg)" stroke="#33479f" stroke-width="2" stroke-linejoin="round"/>';
+ vals.forEach(function(x,k){var p=pt(cx,cy,R*x/100,k);h+='<circle cx="'+p[0]+'" cy="'+p[1]+'" r="4.5" fill="'+NC[k]+'" stroke="#fff" stroke-width="1.5"/>'});
+ S.n.forEach(function(t,k){var p=pt(cx,cy,R+24,k);h+='<text x="'+p[0]+'" y="'+(p[1]+4)+'" text-anchor="middle" font-size="12.5" font-weight="700" fill="'+NC[k]+'" font-family="Vazirmatn,Tahoma,Arial,sans-serif">'+t+'</text>'});
+ s.innerHTML=h}
+function fill(id,items,L,S){var u=$(id);u.textContent="";items.forEach(function(it){var p=PRO[L][it.k][it.r>=50?1:0],nf=L==="en"?it.r:fa(it.r),li=document.createElement("li"),b=document.createElement("b"),s=document.createElement("span");b.textContent=p[0]+" ("+nf+")"+(Math.abs(it.r-50)<15?" – "+S.mild:"");s.textContent=p[1];li.appendChild(b);li.appendChild(s);u.appendChild(li)})}
+function render(){
+ var L=$("lang").value,S=I[L],card=$("card");
+ card.dir=L==="en"?"ltr":"rtl";card.lang=L;
+ $("h-ind").textContent=S.ind;$("h-fc").textContent=S.fc;$("h-ch").textContent=S.ch;$("h-neo").textContent=S.neo;$("h-pos").textContent=S.pos;$("h-neg").textContent=S.neg;
+ $("o-name").textContent=v("name")||S.nm;
+ $("o-pos").textContent=v("pos");show("o-pos",!!v("pos"));
+ var co=[v("co"),v("ind")].filter(Boolean).join(" | ");$("o-co").textContent=co;show("o-co",!!co);
+ var ph=v("phone");link($("o-phone"),ph,"tel:"+ph.replace(/[^\d+]/g,""));
+ var li=v("li");link($("o-li"),li.replace(/^https?:\/\/(www\.)?/i,"").replace(/\/$/,""),li?liHref(li):"");
+ var inds=[v("i1"),v("i2"),v("i3")].filter(Boolean);list($("o-ind"),inds);show("s-ind",inds.length>0);
+ $("o-focus").textContent=v("focus");show("s-focus",!!v("focus"));
+ var ch=[v("c1"),v("c2"),v("c3")].filter(Boolean);list($("o-ch"),ch);show("s-ch",ch.length>0);
+ var vals=KEYS.map(function(k){var x=parseFloat($(k).value);return isNaN(x)?null:Math.max(0,Math.min(100,x))});
+ var any=vals.some(function(x){return x!==null});show("s-neo",any);
+ var all=vals.every(function(x){return x!==null});show("tr",any&&all&&$("showtr").checked);
+ if(any){radar(vals.map(function(x){return x||0}),S);
+  var c=$("chips");c.textContent="";var best=-1,bi=-1;
+  vals.forEach(function(x,k){if(x===null)return;var d=document.createElement("span");d.className="chip";d.style.borderColor=NC[k];d.style.background=NC[k]+"1f";d.innerHTML=S.n[k]+" <b></b>";d.querySelector("b").textContent=L==="en"?x:fa(x);c.appendChild(d);if(x>best){best=x;bi=k}});
+  $("top").textContent=bi>=0?S.top+S.n[bi]:""}
+ if(all){var d=vals.map(function(x,k){return{k:k,r:x,s:k===0?100-x:x}}).sort(function(a,b){return b.s-a.s});
+  fill("tp",d.slice(0,2),L,S);fill("tn",d.slice(-2).reverse(),L,S)}
+}
+function fit(){var sh=document.body.classList.contains("shot"),c=$("card");c.classList.toggle("land",sh);c.style.zoom=sh?Math.min(1,(window.innerWidth-24)/1100):""}
+function saveBlob(b){
+ if(DL)return DL.save({filename:"beyond-the-title-connection-card.png",data:b});
+ var u=URL.createObjectURL(b),a=document.createElement("a");a.href=u;a.download="beyond-the-title-connection-card.png";document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u)},4000);return Promise.resolve()}
+function dlCard(btn){
+ var old=btn.textContent,y=window.scrollY;
+ function done(m){btn.disabled=false;btn.textContent=m||old;if(m)setTimeout(function(){btn.textContent=old},2800);window.scrollTo(0,y)}
+ if(!window.html2canvas){done("ابزار ساخت تصویر بارگذاری نشد");return}
+ btn.disabled=true;btn.textContent="در حال ساخت تصویر…";window.scrollTo(0,0);
+ var c=$("card").cloneNode(true),h=document.createElement("div");
+ c.classList.add("land");c.style.zoom="1";
+ h.style.cssText="position:absolute;left:0;top:0;width:1100px;z-index:-1;pointer-events:none";h.appendChild(c);document.body.appendChild(h);
+ var fr=(document.fonts&&document.fonts.ready)?document.fonts.ready:Promise.resolve();
+ fr.then(function(){return html2canvas(c,{scale:2,backgroundColor:"#fbfaf7",scrollX:0,scrollY:0})})
+ .then(function(cv){h.remove();return new Promise(function(ok,no){cv.toBlob(function(b){b?ok(b):no({})},"image/png")})})
+ .then(saveBlob).then(function(){done()})
+ .catch(function(e){h.remove();done(e&&e.code==="declined"?"":"دانلود انجام نشد، دوباره تلاش کنید")});
+}
+function dlReady(){try{if(window.claude&&claude.use)claude.use("downloads").then(function(d){if(d)DL=d}).catch(function(){})}catch(e){}}
+IDS.forEach(function(i){["input","change"].forEach(function(ev){$(i).addEventListener(ev,function(){save();render()})})});
+$("shot").onclick=function(){document.body.classList.add("shot");fit();window.scrollTo(0,0)};
+$("back").onclick=function(){document.body.classList.remove("shot");fit()};
+$("dl").onclick=function(){dlCard(this)};$("dl2").onclick=function(){dlCard(this)};
+$("reset").onclick=function(){var b=this;
+ if(!b.dataset.arm){b.dataset.arm="1";b.textContent="مطمئنید؟ دوباره بزنید";setTimeout(function(){delete b.dataset.arm;b.textContent="پاک کردن همه"},3000);return}
+ delete b.dataset.arm;b.textContent="پاک کردن همه";
+ IDS.forEach(function(i){var e=$(i);if(e.type==="checkbox")e.checked=true;else if(i==="lang")e.value="fa";else e.value=""});save();render()};
+window.addEventListener("resize",fit);
+load();render();fit();dlReady();
+</script>
+</body>
+</html>
+
+
+
