@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 2,
+  "cardLanguage": "en",
+  "fullName": "Ali Zahrawi",
+  "phone": "",
+  "linkedin": "",
+  "currentRole": "",
+  "company": "",
+  "industry": "",
+  "industryJourney": ["", "", ""],
+  "currentFocus": "",
+  "businessChallenges": ["", "", ""],
+  "neo": {
+    "neuroticism": null,
+    "extraversion": null,
+    "openness": null,
+    "agreeableness": null,
+    "conscientiousness": null
+  },
+  "showNeoInsights": false,
+  "publicProfile": "https://github.com/alizahrawi",
+  "note": "Starter profile: complete only with verified information you are comfortable sharing. NEO scores are intentionally blank."
+}
+
